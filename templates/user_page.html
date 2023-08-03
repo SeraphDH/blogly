@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>Users</h1>
+<body>
+    {% for user in users %}
+    <li>
+        <a href="/users/{{ user.id }}">{{ user.first_name }}</a>
+    </li>
+    {% endfor %}
+
+    <!-- Add the "Return to Home Page" button -->
+    <p><a href="/">Return to Home Page</a></p>
+</body>
+</html>
