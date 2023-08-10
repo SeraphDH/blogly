@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Tag</title>
+</head>
+<body>
+    <h1>Edit Tag</h1>
+    <form action="{{ url_for('edit_tag', tag_id=tag.id) }}" method="post">
+        <label for="tag_name">Tag Name:</label>
+        <input type="text" id="tag_name" name="tag_name" value="{{ tag.name }}" required>
+        <button type="submit">Save Changes</button>
+    </form>
+    <p><a href="{{ url_for('get_tags') }}">Back to Tags</a></p>
+</body>
+</html>

@@ -12,6 +12,12 @@
     <label for="content">Content:</label>
     <textarea id="content" name="content"></textarea><br>
     
+    <p>Select Tags:</p>
+    {% for tag in tags %}
+        <label for="{{tag.id}}">{{tag.name}}</label>
+        <input type="checkbox" name="tags" value="{{ tag.id }}" id="{{tag.id}}">
+    {% endfor %}
+    
     <button type="submit">Add Post</button>
 </form>
 <p><a href="{{ url_for('show_user_info', user_id=user_info.id) }}">Cancel</a></p>
